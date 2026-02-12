@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.title{
+ font-size: 40px;
+ font-weight: lighter;
+ text-align: center;
+ margin-top:0;
+ margin:20px;
+ padding:10px;
+}
+
+.sub-title{
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+p{
+    font-size:15px;
+    padding:10px;
+}
+
+h1,h2,h3,h4,h5,h6, p{
+    color:#E0E0E0;
+}
+
+
+html{
+    background-color:#1E1E1E;
+    margin:0;
+    padding:0;
+}
+body{
+    color: #E0E0E0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.title-nav{
+    background-color: #242424;
+    margin:50px;
+    padding:10px;
+    text-align: center  ;
+}
+
+.container{
+    text-align: center;
+    margin: 20px 100px 60px 100px;
+    background-color: #242424;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.quiz-container{
+    text-align: left;
+    margin: 20px 100px 60px 100px;
+    background-color: #242424;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+/* Question spacing */
+.question{
+    margin-bottom: 30px;
+}
+
+/* Question text */
+.question p{
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+}
+
+/* Align radio buttons properly */
+.question label{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Make radio buttons aligned nicely */
+input[type="radio"]{
+    margin-right: 10px;
+    transform: scale(1.1);
+    vertical-align: middle;
+}
+
+/* Improve button */
+button{
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #FFFFFF;
+    color: #1E1E1E;
+}
+
+/* Result text */
+#result{
+    margin-top: 25px;
+    font-size: 22px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.button-container form {
+    display: inline-block;
+    margin: 5px;
+}
+
+.button-container button {
+    width: 150px;
+    height: 50px;
+    display: inline-block;
+    box-sizing: border-box;
+}
