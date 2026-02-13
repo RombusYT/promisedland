@@ -138,8 +138,26 @@ document.getElementById("quizForm").addEventListener("submit", function(event) {
 
     window.alert("You got " + score + " out of 5 questions correct.");
 
+    // Submit to Formspree using fetch to avoid page redirect
     setTimeout(function() {
-        form.submit();
+        var formData = new FormData(form);
+        fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(function(response) {
+            if (response.ok) {
+                console.log("Form submitted successfully to Formspree");
+            } else {
+                console.log("Form submission had an error");
+            }
+        })
+        .catch(function(error) {
+            console.log("Error submitting form:", error);
+        });
     }, 2000);
 });
 </script>
