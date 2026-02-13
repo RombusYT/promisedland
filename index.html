@@ -2,21 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>The Promised Land - A Historical Event</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Promised Land — A Historical Event</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="title-nav">
-        <h2 class="title">The Promised Land</h2>
-        
-    <div class="button-container">
-        <form action=""><button>Home</button></form>
-        <form action="quiz.html"><button>Quiz</button></form>
-    </div>
-
-        
-        <p>How did the underground railroad shape freedom for enslaved people, and what role did Canada play in helping enslaved people reach freedom?</p>
-    </div>
+    <header class="title-nav">
+        <h1 class="title">The Promised Land</h1>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="quiz.html">Quiz</a>
+        </nav>
+        <p>How did the Underground Railroad shape freedom for enslaved people, and what role did Canada play in helping them reach freedom?</p>
+    </header>
 
     <!-- Introduction -->
     <article class="container">
@@ -49,60 +47,92 @@
     </article>
 
     <!-- Timeline -->
-    <article class="container">
+    <article class="container timeline-wrapper">
         <h3 class="sub-title">Timeline: The Road to the Promised Land</h3>
-        <table>
-            <tr>
-                <th>Year / Period</th>
-                <th>Milestone Event</th>
-                <th>Significance</th>
-            </tr>
-            <tr>
-                <td>Late 1700s</td>
-                <td>Origin of the Network</td>
-                <td>Informal networks begin, led by Quakers and free Black communities.</td>
-            </tr>
-            <tr>
-                <td>1793</td>
-                <td>Upper Canada Anti-Slavery Act</td>
-                <td>Lt. Gov. Simcoe signs an act to gradually end slavery in Ontario.</td>
-            </tr>
-            <tr>
-                <td>1834</td>
-                <td>British Slavery Abolition Act</td>
-                <td>Slavery is abolished across the Empire; Canada becomes a legal sanctuary.</td>
-            </tr>
-            <tr>
-                <td>1841</td>
-                <td>Founding of Dawn Settlement</td>
-                <td>Josiah Henson establishes a community focused on education.</td>
-            </tr>
-            <tr>
-                <td>1849</td>
-                <td>Founding of Buxton</td>
-                <td>A model community for formerly enslaved people is created.</td>
-            </tr>
-            <tr>
-                <td>1850</td>
-                <td>U.S. Fugitive Slave Act</td>
-                <td>Federal law endangers escapees in the North; refugee numbers to Canada spike.</td>
-            </tr>
-            <tr>
-                <td>1851</td>
-                <td>North American Coloured Convention</td>
-                <td>Abolitionists meet in Toronto to endorse Canada as the primary destination.</td>
-            </tr>
-            <tr>
-                <td>1861 – 1865</td>
-                <td>U.S. Civil War</td>
-                <td>The Railroad transitions as thousands of Black men return to the U.S. to fight.</td>
-            </tr>
-            <tr>
-                <td>1999 – Modern</td>
-                <td>National Historic Recognition</td>
-                <td>The Canadian Government formally designates the Railroad as a National Historic Event.</td>
-            </tr>
-        </table>
+        <div class="timeline">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item timeline-item-left">
+                <div class="timeline-content">
+                    <span class="timeline-year">Late 1700s</span>
+                    <h4 class="timeline-event">Origin of the Network</h4>
+                    <p class="timeline-significance">Informal networks begin, led by Quakers and free Black communities.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item timeline-item-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year">1793</span>
+                    <h4 class="timeline-event">Upper Canada Anti-Slavery Act</h4>
+                    <p class="timeline-significance">Lt. Gov. Simcoe signs an act to gradually end slavery in Ontario.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item timeline-item-left">
+                <div class="timeline-content">
+                    <span class="timeline-year">1834</span>
+                    <h4 class="timeline-event">British Slavery Abolition Act</h4>
+                    <p class="timeline-significance">Slavery is abolished across the Empire; Canada becomes a legal sanctuary.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item timeline-item-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year">1841</span>
+                    <h4 class="timeline-event">Founding of Dawn Settlement</h4>
+                    <p class="timeline-significance">Josiah Henson establishes a community focused on education.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item timeline-item-left">
+                <div class="timeline-content">
+                    <span class="timeline-year">1849</span>
+                    <h4 class="timeline-event">Founding of Buxton</h4>
+                    <p class="timeline-significance">A model community for formerly enslaved people is created.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item timeline-item-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year">1850</span>
+                    <h4 class="timeline-event">U.S. Fugitive Slave Act</h4>
+                    <p class="timeline-significance">Federal law endangers escapees in the North; refugee numbers to Canada spike.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item timeline-item-left">
+                <div class="timeline-content">
+                    <span class="timeline-year">1851</span>
+                    <h4 class="timeline-event">North American Coloured Convention</h4>
+                    <p class="timeline-significance">Abolitionists meet in Toronto to endorse Canada as the primary destination.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item timeline-item-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year">1861 – 1865</span>
+                    <h4 class="timeline-event">U.S. Civil War</h4>
+                    <p class="timeline-significance">The Railroad transitions as thousands of Black men return to the U.S. to fight.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item timeline-item-left">
+                <div class="timeline-content">
+                    <span class="timeline-year">1999 – Modern</span>
+                    <h4 class="timeline-event">National Historic Recognition</h4>
+                    <p class="timeline-significance">The Canadian Government formally designates the Railroad as a National Historic Event.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
     </article>
 
     <!-- Legacy -->

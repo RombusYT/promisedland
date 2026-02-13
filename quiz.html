@@ -1,124 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>The Promised Land - Quiz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Promised Land — Quiz</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .correct { color: green; font-weight: bold; }
-        .incorrect { color: red; font-weight: bold; }
-        .feedback { display: block; margin-top: 5px; }
-    </style>
 </head>
 <body>
 
-<div class="title-nav">
-    <h2 class="title">The Promised Land Quiz</h2>
-        <div class="button-container">
-        <form action="index.html"><button>Home</button></form>
-        <form action="quiz.html"><button>Quiz</button></form>
-    </div>
-    <p>Based entirely on the text: <em>The Promised Land: A Journey Through Time</em></p>
-</div>
+<header class="title-nav">
+    <h1 class="title">The Promised Land Quiz</h1>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="quiz.html" class="active">Quiz</a>
+    </nav>
+    <p>Test your knowledge based on <em>The Promised Land: A Journey Through Time</em></p>
+</header>
 
-<div class="quiz-container">
-
-<form id="quizForm" action="https://formspree.io/f/mzdaerwr" method="POST">
-
-    <input type="hidden" name="_subject" value="Promised Land Quiz Submission">
-    <input type="hidden" name="score" id="scoreField">
-
-    <div class="question" id="q1-container">
-        <p>1. What did the term “stations” refer to on the Underground Railroad?</p>
-        <input type="radio" name="q1" value="a"> Train depots along major rail lines<br>
-        <input type="radio" name="q1" value="b"> Safe houses used to hide escapees<br>
-        <input type="radio" name="q1" value="c"> Government offices in Canada<br>
-        <span class="feedback"></span>
+<main class="quiz-container">
+    <div class="quiz-header">
+        <h2 class="sub-title">Knowledge Check</h2>
+        <p>Choose one answer per question. You'll see feedback after submitting.</p>
     </div>
 
-    <div class="question" id="q2-container">
-        <p>2. What federal law passed in September 1850 made escape more dangerous?</p>
-        <input type="radio" name="q2" value="a"> British Slavery Abolition Act<br>
-        <input type="radio" name="q2" value="b"> Common Schools Act<br>
-        <input type="radio" name="q2" value="c"> Fugitive Slave Act<br>
-        <span class="feedback"></span>
+    <div class="quiz-progress" id="quizProgress" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
     </div>
 
-    <div class="question" id="q3-container">
-        <p>3. Why did Canada become the primary destination after 1834?</p>
-        <input type="radio" name="q3" value="a"> Slavery was abolished across the British Empire<br>
-        <input type="radio" name="q3" value="b"> Canada offered free farmland to all refugees<br>
-        <input type="radio" name="q3" value="c"> The U.S. government paid people to move there<br>
-        <span class="feedback"></span>
-    </div>
+    <form id="quizForm" action="https://formspree.io/f/mzdaerwr" method="POST">
+        <input type="hidden" name="_subject" value="Promised Land Quiz Submission">
+        <input type="hidden" name="score" id="scoreField">
 
-    <div class="question" id="q4-container">
-        <p>4. Who founded the Dawn Settlement in 1841?</p>
-        <input type="radio" name="q4" value="a"> Harriet Tubman<br>
-        <input type="radio" name="q4" value="b"> Josiah Henson<br>
-        <input type="radio" name="q4" value="c"> Rev. William King<br>
-        <span class="feedback"></span>
-    </div>
+        <div class="question" id="q1-container">
+            <p>1. What did the term “stations” refer to on the Underground Railroad?</p>
+            <label><input type="radio" name="q1" value="a"><span>Train depots along major rail lines</span></label>
+            <label><input type="radio" name="q1" value="b"><span>Safe houses used to hide escapees</span></label>
+            <label><input type="radio" name="q1" value="c"><span>Government offices in Canada</span></label>
+            <span class="feedback" aria-live="polite"></span>
+        </div>
 
-    <div class="question" id="q5-container">
-        <p>5. What was the purpose of Benjamin Drew’s <em>A North-Side View of Slavery</em> (1856)?</p>
-        <input type="radio" name="q5" value="a"> To provide firsthand interviews of formerly enslaved people in Canada<br>
-        <input type="radio" name="q5" value="b"> To promote segregation in Canadian schools<br>
-        <input type="radio" name="q5" value="c"> To outline military strategies during the Civil War<br>
-        <span class="feedback"></span>
-    </div>
+        <div class="question" id="q2-container">
+            <p>2. What federal law passed in September 1850 made escape more dangerous?</p>
+            <label><input type="radio" name="q2" value="a"><span>British Slavery Abolition Act</span></label>
+            <label><input type="radio" name="q2" value="b"><span>Common Schools Act</span></label>
+            <label><input type="radio" name="q2" value="c"><span>Fugitive Slave Act</span></label>
+            <span class="feedback" aria-live="polite"></span>
+        </div>
 
-    <button type="submit">Submit!</button>
+        <div class="question" id="q3-container">
+            <p>3. Why did Canada become the primary destination after 1834?</p>
+            <label><input type="radio" name="q3" value="a"><span>Slavery was abolished across the British Empire</span></label>
+            <label><input type="radio" name="q3" value="b"><span>Canada offered free farmland to all refugees</span></label>
+            <label><input type="radio" name="q3" value="c"><span>The U.S. government paid people to move there</span></label>
+            <span class="feedback" aria-live="polite"></span>
+        </div>
 
-</form>
+        <div class="question" id="q4-container">
+            <p>4. Who founded the Dawn Settlement in 1841?</p>
+            <label><input type="radio" name="q4" value="a"><span>Harriet Tubman</span></label>
+            <label><input type="radio" name="q4" value="b"><span>Josiah Henson</span></label>
+            <label><input type="radio" name="q4" value="c"><span>Rev. William King</span></label>
+            <span class="feedback" aria-live="polite"></span>
+        </div>
 
-<h3 id="result"></h3>
+        <div class="question" id="q5-container">
+            <p>5. What was the purpose of Benjamin Drew’s <em>A North-Side View of Slavery</em> (1856)?</p>
+            <label><input type="radio" name="q5" value="a"><span>To provide firsthand interviews of formerly enslaved people in Canada</span></label>
+            <label><input type="radio" name="q5" value="b"><span>To promote segregation in Canadian schools</span></label>
+            <label><input type="radio" name="q5" value="c"><span>To outline military strategies during the Civil War</span></label>
+            <span class="feedback" aria-live="polite"></span>
+        </div>
 
-</div>
+        <div class="quiz-actions">
+            <button type="submit" class="btn btn-primary">Submit answers</button>
+        </div>
+    </form>
+
+    <p id="result" role="status" aria-live="polite"></p>
+</main>
 
 <script>
 document.getElementById("quizForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    let score = 0;
+    var answers = { q1: "b", q2: "c", q3: "a", q4: "b", q5: "a" };
+    var form = this;
+    var resultEl = document.getElementById("result");
+    var questionIds = ["q1", "q2", "q3", "q4", "q5"];
 
-    let answers = {
-        q1: "b",
-        q2: "c",
-        q3: "a",
-        q4: "b",
-        q5: "a"
-    };
-
-    let form = this;
-
-    for (let question in answers) {
-        let selected = form.querySelector(`input[name="${question}"]:checked`);
-        let container = document.getElementById(question + "-container");
-        let feedback = container.querySelector(".feedback");
-
-        if (!selected) {
-            alert("Please answer all questions before submitting.");
-            return;
+    // Check if all 5 questions have a selection
+    var allAnswered = true;
+    for (var i = 0; i < questionIds.length; i++) {
+        if (!form.querySelector("input[name=\"" + questionIds[i] + "\"]:checked")) {
+            allAnswered = false;
+            break;
         }
+    }
+
+    if (!allAnswered) {
+        // Clear any previous per-question feedback
+        for (var j = 0; j < questionIds.length; j++) {
+            var container = document.getElementById(questionIds[j] + "-container");
+            var feedback = container.querySelector(".feedback");
+            feedback.textContent = "";
+            feedback.className = "feedback";
+        }
+        window.alert("Please select an answer for all 5 questions.");
+        return;
+    }
+
+    // All answered: show correct/incorrect and score
+    resultEl.className = "";
+    var score = 0;
+
+    for (var question in answers) {
+        var selected = form.querySelector("input[name=\"" + question + "\"]:checked");
+        var container = document.getElementById(question + "-container");
+        var feedback = container.querySelector(".feedback");
 
         if (selected.value === answers[question]) {
             score++;
-            feedback.textContent = "✔ Correct";
+            feedback.textContent = "Correct";
             feedback.className = "feedback correct";
         } else {
-            feedback.textContent = "✘ Incorrect";
+            feedback.textContent = "Incorrect";
             feedback.className = "feedback incorrect";
         }
     }
 
-    document.getElementById("result").innerHTML =
-        "You scored " + score + " out of 5.";
+    resultEl.textContent = "You scored " + score + " out of 5.";
+    resultEl.style.display = "block";
 
     document.getElementById("scoreField").value = score + " / 5";
 
-    setTimeout(() => {
+    var dots = document.querySelectorAll("#quizProgress span");
+    for (var i = 0; i < dots.length; i++) dots[i].classList.add("done");
+
+    window.alert("You got " + score + " out of 5 questions correct.");
+
+    setTimeout(function() {
         form.submit();
-    }, 1500);
+    }, 2000);
 });
 </script>
 
