@@ -2,23 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 :root {
-    --color-bg: #F5F1EB;
+    --color-bg: #E8E8E8;
     --color-surface: #FFFFFF;
-    --color-surface-soft: #FDFBFA;
-    --color-primary: #2C5530;
-    --color-primary-light: #3D6B42;
-    --color-accent: #B8860B;
-    --color-accent-soft: #D4A84B;
-    --color-text: #2D2D2D;
+    --color-surface-soft: #F5F5F5;
+    --color-primary: #1A1A1A;
+    --color-primary-light: #333333;
+    --color-accent: #4A4A4A;
+    --color-accent-soft: #6B6B6B;
+    --color-text: #1A1A1A;
     --color-text-muted: #5C5C5C;
-    --color-border: #E5E0D8;
-    --color-success: #2C5530;
-    --color-error: #A63D40;
+    --color-border: #D0D0D0;
+    --color-success: #1A1A1A;
+    --color-error: #6B6B6B;
     --font-heading: 'Cormorant Garamond', Georgia, serif;
     --font-body: 'Source Sans 3', -apple-system, sans-serif;
-    --shadow-sm: 0 1px 3px rgba(44, 85, 48, 0.06);
-    --shadow-md: 0 4px 12px rgba(44, 85, 48, 0.08);
-    --shadow-lg: 0 8px 24px rgba(44, 85, 48, 0.1);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
     --radius: 12px;
     --radius-sm: 8px;
 }
@@ -68,13 +68,13 @@ a:hover {
 }
 
 a:focus-visible {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid #4A4A4A;
     outline-offset: 2px;
 }
 
 /* ===== Header / Nav ===== */
 .title-nav {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    background: linear-gradient(135deg, #1A1A1A 0%, #333333 100%);
     margin: 0;
     padding: 2rem 1.5rem 2.25rem;
     text-align: center;
@@ -123,13 +123,13 @@ a:focus-visible {
 
 .nav-links a:hover {
     background: #FFF;
-    color: var(--color-primary);
+    color: #1A1A1A;
     border-color: #FFF;
 }
 
 .nav-links a.active {
     background: #FFF;
-    color: var(--color-primary);
+    color: #1A1A1A;
     border-color: #FFF;
 }
 
@@ -156,7 +156,7 @@ a:focus-visible {
     margin: 0 0 1.25rem;
     padding: 0 0 0.75rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-text);
     border-bottom: 2px solid var(--color-border);
 }
 
@@ -278,7 +278,7 @@ a:focus-visible {
 
 .question label:has(input:checked) {
     border-color: var(--color-primary);
-    background: rgba(44, 85, 48, 0.06);
+    background: rgba(0, 0, 0, 0.04);
 }
 
 .question .feedback {
@@ -326,7 +326,7 @@ a:focus-visible {
 }
 
 .btn-primary:focus-visible {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid #4A4A4A;
     outline-offset: 2px;
 }
 
@@ -338,7 +338,7 @@ a:focus-visible {
     font-size: 1.25rem;
     font-family: var(--font-heading);
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-text);
     background: var(--color-surface-soft);
     border-radius: var(--radius-sm);
     border: 1px solid var(--color-border);
@@ -371,7 +371,7 @@ a:focus-visible {
     top: 0;
     bottom: 0;
     width: 3px;
-    background: linear-gradient(to bottom, var(--color-accent), var(--color-accent-soft), var(--color-accent));
+    background: linear-gradient(to bottom, #4A4A4A, #6B6B6B, #4A4A4A);
     transform: translateX(-50%);
     border-radius: 2px;
 }
@@ -435,30 +435,30 @@ a:focus-visible {
 }
 
 .timeline-item-left .timeline-content {
-    border-right: 3px solid var(--color-accent);
+    border-right: 3px solid #4A4A4A;
 }
 
 .timeline-item-right .timeline-content {
-    border-left: 3px solid var(--color-primary);
+    border-left: 3px solid #1A1A1A;
 }
 
 .timeline-dot {
     position: absolute;
     width: 16px;
     height: 16px;
-    background: var(--color-accent);
+    background: #1A1A1A;
     border: 3px solid var(--color-surface);
     border-radius: 50%;
     flex-shrink: 0;
     z-index: 2;
-    box-shadow: 0 0 0 2px var(--color-primary);
+    box-shadow: 0 0 0 2px #4A4A4A;
 }
 
 .timeline-year {
     display: inline-block;
     font-size: 0.8rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-text-muted);
     margin-bottom: 0.35rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -515,7 +515,7 @@ a:focus-visible {
         margin-left: 0 !important;
         margin-right: 0 !important;
         text-align: left !important;
-        border-left: 3px solid var(--color-primary) !important;
+        border-left: 3px solid #1A1A1A !important;
         border-right: none !important;
     }
 }
