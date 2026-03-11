@@ -597,6 +597,43 @@ a:focus-visible {
     padding: 0;
 }
 
+/* ===== Media gallery (images + paragraphs) ===== */
+.media-gallery {
+    max-width: 880px;
+}
+
+.media-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.media-card {
+    display: block;
+}
+
+.media-card img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 0.75rem;
+}
+
+.media-card figcaption {
+    width: 100%;
+}
+
+.media-card h4 {
+    margin-top: 0;
+}
+
+.media-card p {
+    padding-top: 0.35rem;
+}
+
 @media (max-width: 768px) {
     .title-nav .title {
         font-size: 1.9rem;
@@ -634,6 +671,11 @@ a:focus-visible {
         text-align: left !important;
         border-left: 3px solid #1A1A1A !important;
         border-right: none !important;
+    }
+
+    .media-card img {
+        max-height: 260px;
+        object-fit: cover;
     }
 }
 
