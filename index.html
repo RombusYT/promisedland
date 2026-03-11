@@ -3,215 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Promised Land — A Historical Event</title>
+    <title>The Promised Land — Quiz</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <header class="title-nav">
-        <h1 class="title">The Promised Land</h1>
-        <nav class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="quiz.html">Quiz</a>
-        </nav>
-        <p>How did the Underground Railroad shape freedom for enslaved people, and what role did Canada play in helping them reach freedom?</p>
-    </header>
 
-    <!-- Introduction -->
-    <article class="container">
-        <h3 class="sub-title">Introduction: 1780s – 1860s</h3>
-        <p>Starting in the <strong>late 18th century</strong>, the Underground Railroad emerged as a secret network of people, safe houses, and routes. It wasn’t a literal railroad, but by the <strong>mid-1800s</strong>, it had adopted a sophisticated system of codes: "stations" for safe houses, "conductors" for guides, and "passengers" for those escaping. Between <strong>1800 and 1865</strong>, estimates suggest that tens of thousands of people escaped through this network, which spanned the U.S. North and stretched into the "Promised Land" of Canada.</p>
-    </article>
+<header class="title-nav">
+    <h1 class="title">The Promised Land Quiz</h1>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="quiz.html" class="active">Quiz</a>
+    </nav>
+    <p>Test your knowledge based on <em>The Promised Land: A Journey Through Time</em></p>
+</header>
 
-    <!-- Freedom and Risk -->
-    <article class="container">
-        <h3 class="sub-title">Freedom and the Risk of Escape: 1850 and Beyond</h3>
-        <p>For the enslaved people who risked everything, the journey was a gauntlet of danger. The stakes grew significantly higher in September 1850 with the passage of the <strong>Fugitive Slave Act</strong>. This federal law made it easier for bounty hunters to capture escapees even in "free" northern states, effectively turning every Black person in the North into a potential target. In response, the network of allies—including free Black communities, Quakers, and Native Americans—intensified their efforts throughout the 1850s to provide food, shelter, and guidance toward the Canadian border.</p>
-    </article>
+<main class="quiz-container">
+    <div class="quiz-header">
+        <h2 class="sub-title">Knowledge Check</h2>
+        <p>Choose one answer per question. You'll see feedback after submitting.</p>
+    </div>
 
-    <!-- Canada as Destination -->
-    <article class="container">
-        <h3 class="sub-title">Why was Canada the Destination of Choice? 1834 – 1860</h3>
-        <p>Canada (then British North America) became the primary goal after August 1, 1834, when the <strong>Slavery Abolition Act</strong> took effect throughout the British Empire. From that day forward, Black refugees were legally beyond the reach of American slave catchers.</p>
-        <p>Between 1850 and 1860, during the "Great Migration" of freedom seekers, as many as 30,000 to 40,000 individuals crossed into what is now Ontario and the Maritimes to live without the constant fear of capture.</p>
-    </article>
+    <div class="quiz-progress" id="quizProgress" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
 
-    <!-- Settlement and Community Growth -->
-    <article class="container">
-        <h3 class="sub-title">Settlement and Community Growth: 1840s – 1870s</h3>
-        <p>Freedom seekers didn’t just settle; they built. From the 1840s through the 1870s, thriving communities emerged in Windsor, Chatham, and Toronto.</p>
-        <ul>
-            <li><strong>1841:</strong> Josiah Henson helped found the Dawn Settlement in Dresden, Ontario, as a place for vocational training.</li>
-            <li><strong>1849:</strong> Rev. William King established the Buxton Settlement (Elgin Settlement), which by 1850 was already becoming a model of agricultural and academic success.</li>
-        </ul>
-        <p>While physical liberty was protected, challenges remained. In 1850, the Ontario government passed the <strong>Common Schools Act</strong>, which permitted segregated schools. This serves as a reminder that even after reaching the "Promised Land," the struggle for full equality continued throughout the late 19th century.</p>
-    </article>
+    <form id="quizForm" action="https://formspree.io/f/mzdaerwr" method="POST">
+        <input type="hidden" name="_subject" value="Promised Land Quiz Submission">
+        <input type="hidden" name="score" id="scoreField">
 
-    <!-- Timeline -->
-    <article class="container timeline-wrapper">
-        <h3 class="sub-title">Timeline: The Road to the Promised Land</h3>
-        <div class="timeline">
-            <div class="timeline-line"></div>
-
-            <div class="timeline-item timeline-item-left">
-                <div class="timeline-content">
-                    <span class="timeline-year">Late 1700s</span>
-                    <h4 class="timeline-event">Origin of the Network</h4>
-                    <p class="timeline-significance">Informal networks begin, led by Quakers and free Black communities.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-
-            <div class="timeline-item timeline-item-right">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-year">1793</span>
-                    <h4 class="timeline-event">Upper Canada Anti-Slavery Act</h4>
-                    <p class="timeline-significance">Lt. Gov. Simcoe signs an act to gradually end slavery in Ontario.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item timeline-item-left">
-                <div class="timeline-content">
-                    <span class="timeline-year">1834</span>
-                    <h4 class="timeline-event">British Slavery Abolition Act</h4>
-                    <p class="timeline-significance">Slavery is abolished across the Empire; Canada becomes a legal sanctuary.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-
-            <div class="timeline-item timeline-item-right">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-year">1841</span>
-                    <h4 class="timeline-event">Founding of Dawn Settlement</h4>
-                    <p class="timeline-significance">Josiah Henson establishes a community focused on education.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item timeline-item-left">
-                <div class="timeline-content">
-                    <span class="timeline-year">1849</span>
-                    <h4 class="timeline-event">Founding of Buxton</h4>
-                    <p class="timeline-significance">A model community for formerly enslaved people is created.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-
-            <div class="timeline-item timeline-item-right">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-year">1850</span>
-                    <h4 class="timeline-event">U.S. Fugitive Slave Act</h4>
-                    <p class="timeline-significance">Federal law endangers escapees in the North; refugee numbers to Canada spike.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item timeline-item-left">
-                <div class="timeline-content">
-                    <span class="timeline-year">1851</span>
-                    <h4 class="timeline-event">North American Coloured Convention</h4>
-                    <p class="timeline-significance">Abolitionists meet in Toronto to endorse Canada as the primary destination.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-
-            <div class="timeline-item timeline-item-right">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-year">1861 – 1865</span>
-                    <h4 class="timeline-event">U.S. Civil War</h4>
-                    <p class="timeline-significance">The Railroad transitions as thousands of Black men return to the U.S. to fight.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item timeline-item-left">
-                <div class="timeline-content">
-                    <span class="timeline-year">1999 – Modern</span>
-                    <h4 class="timeline-event">National Historic Recognition</h4>
-                    <p class="timeline-significance">The Canadian Government formally designates the Railroad as a National Historic Event.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
+        <div class="question" id="q1-container">
+            <p>1. According to the text, what did “conductors” refer to in the Underground Railroad's system of codes?</p>
+            <label><input type="radio" name="q1" value="a"><span>Safe houses where escapees could rest</span></label>
+            <label><input type="radio" name="q1" value="b"><span>Guides who led escapees along the routes</span></label>
+            <label><input type="radio" name="q1" value="c"><span>People escaping to freedom</span></label>
+            <span class="feedback" aria-live="polite"></span>
         </div>
-    </article>
 
-    <!-- Legacy -->
-    <article class="container">
-        <h3 class="sub-title">Legacy: 1865 to the Present</h3>
-        <p>Following the end of the U.S. Civil War in 1865, the Underground Railroad’s primary mission concluded, but its impact on Canada was permanent. The descendants of those who arrived in the mid-1800s went on to influence Canadian culture, law, faith communities, and civil rights for over a century. The churches, schools, and mutual-aid societies they built became anchors for later generations pushing for equality.</p>
-        <p>Today, the Government of Canada maintains plaques, historic sites, and museums, such as the Josiah Henson Museum of Afro-Canadian History, to ensure these stories are never forgotten. Walking through these spaces connects present-day visitors to the courage of those who treated freedom not as a dream, but as a plan of action carried out step by step.</p>
-        <p>Benjamin Drew’s <em>A North-Side View of Slavery</em>, published in 1856, provides first-hand interviews with formerly enslaved people living in Canada. These accounts document the harrowing escapes and the building of new lives in communities like St. Catharines, Chatham, and Buxton, proving that the Underground Railroad was not just a path away from slavery, but a bridge toward new, self-made communities.</p>
-    </article>
-
-    <!-- Visual Evidence: Maps, People, and Places -->
-    <article class="container media-gallery">
-        <h3 class="sub-title">Seeing the Journey to the Promised Land</h3>
-        <div class="media-grid">
-            <figure class="media-card">
-                <img src="https://www.heritagetrust.on.ca/oha/media/Images/plaques/underground-railroad-map.jpg" alt="Historic map showing Underground Railroad routes from the American South to Canada">
-                <figcaption>
-                    <h4>Mapping the Network of Resistance</h4>
-                    <p>Maps like this help us visualize the difficult journeys freedom seekers took during the mid-1800s. Lines stretch from slave-holding states in the American South toward the Great Lakes and the Canadian border, reminding us that every line on the page represents real families walking, hiding, and traveling by night.</p>
-                    <p>Together with maps that show which states were "slave" and which were "free," we can clearly see the distance and danger people accepted in order to reach safety. The Underground Railroad was never a single route—it was a constantly shifting network of pathways, hiding places, and allies united by the belief that slavery was wrong.</p>
-                </figcaption>
-            </figure>
-
-            <figure class="media-card">
-                <img src="https://www.nps.gov/common/uploads/structured_data/3C7BFD2E-1DD8-B71B-0B5F6F3B7C5A0E7E.jpg" alt="Portrait of Harriet Tubman looking directly at the viewer">
-                <figcaption>
-                    <h4>The Faces of Freedom and Persistence</h4>
-                    <p>This portrait of Harriet Tubman captures one of the most famous leaders of the Underground Railroad. After escaping slavery herself, she repeatedly returned to the South, risking her life to guide others to freedom and earning the nickname "Moses" among those she led.</p>
-                    <p>Placed beside modern symbols such as the Black Lives Matter movement, Tubman’s image reminds us that the struggle for justice did not end in the 1800s. The same courage, determination, and community support that powered the Underground Railroad still inspire today’s movements for racial equality and human rights.</p>
-                </figcaption>
-            </figure>
-
-            <figure class="media-card">
-                <img src="https://www.pc.gc.ca/-/media/lhn-nhs/on/undergroundrailroad/images/plaque_undergroundrailroad.ashx" alt="Bronze Parks Canada plaque commemorating the Underground Railroad as a National Historic Event">
-                <figcaption>
-                    <h4>Establishing Sanctuary in Canada</h4>
-                    <p>This official plaque recognizes the Underground Railroad as a major event in Canadian history. It explains that between 1800 and 1865, tens of thousands of Black refugees crossed into what is now Canada because slavery was illegal there under British law.</p>
-                    <p>For many people escaping slavery, Canada became known as the "Promised Land"—not because it was perfect, but because it was one of the few places in North America where their freedom was protected by law. These plaques are more than metal; they are public promises to remember the people who turned legal freedom into lived reality.</p>
-                </figcaption>
-            </figure>
-
-            <figure class="media-card">
-                <img src="https://www.heritagetrust.on.ca/oha/media/Images/plaques/buxton-settlement-poster.jpg" alt="Historic poster advertising the Elgin (Buxton) Settlement in Canada West">
-                <figcaption>
-                    <h4>Building Success at the Elgin Settlement</h4>
-                    <p>This historical poster shows how the Elgin (Buxton) Settlement advertised itself as a place of opportunity. It highlights farms, well-built houses, and schools created by formerly enslaved people who arrived with little more than determination and skills.</p>
-                    <p>Documents like this prove that Black refugees did far more than just escape; they planned, organized, and built thriving communities. At Buxton, residents founded churches, ran businesses, and insisted on high standards in their schools, demonstrating that given a safe environment, they could create a stable and bright future for their families.</p>
-                </figcaption>
-            </figure>
+        <div class="question" id="q2-container">
+            <p>2. What did the Fugitive Slave Act of September 1850 do, according to the article?</p>
+            <label><input type="radio" name="q2" value="a"><span>Made it easier for bounty hunters to capture escapees even in "free" northern states</span></label>
+            <label><input type="radio" name="q2" value="b"><span>Abolished slavery in Canada</span></label>
+            <label><input type="radio" name="q2" value="c"><span>Created new safe routes to Canada</span></label>
+            <span class="feedback" aria-live="polite"></span>
         </div>
-    </article>
 
-    <!-- Conclusion -->
-    <article class="container">
-        <h3 class="sub-title">Conclusion</h3>
-        <p>Canada’s role was pivotal. In the dark years between the late 1700s and 1865, it stood as a beacon of legal freedom, the "Promised Land" where dreams of liberty finally met the reality of the law.</p>
-    </article>
+        <div class="question" id="q3-container">
+            <p>3. When did the Slavery Abolition Act take effect throughout the British Empire, making Canada a legal sanctuary?</p>
+            <label><input type="radio" name="q3" value="a"><span>1793</span></label>
+            <label><input type="radio" name="q3" value="b"><span>August 1, 1834</span></label>
+            <label><input type="radio" name="q3" value="c"><span>1850</span></label>
+            <span class="feedback" aria-live="polite"></span>
+        </div>
 
-    <!-- Sources -->
-    <article class="container">
-        <h3 class="sub-title">Sources/Citations</h3>
-        <ol>
-            <li>Parks Canada — Underground Railroad as a National Historic Event. <a href="https://parks.canada.ca/culture/designation/evenement-event/chemin-de-fer-clandestin-underground-railroad" target="_blank">Link</a></li>
-            <li>Ontario Heritage Trust — Underground Railroad history and escape routes. <a href="https://www.heritagetrust.on.ca/pages/our-stories/slavery-to-freedom/history/the-underground-railroad" target="_blank">Link</a></li>
-            <li>The Canadian Encyclopedia — Underground Railroad overview. <a href="https://thecanadianencyclopedia.ca/en/article/underground-railroad" target="_blank">Link</a></li>
-            <li>Parks Canada — Black history and heritage context. <a href="https://parks.canada.ca/culture/designation/histoire-noirs-black-history" target="_blank">Link</a></li>
-            <li>Parks Canada — Harriet Tubman designated National Historic Person. <a href="https://parks.canada.ca/culture/designation/personnage-person/harriet-tubman" target="_blank">Link</a></li>
-            <li>Ontario Heritage Trust — Buxton National Historic Site context. <a href="https://www.heritagetrust.on.ca/pages/programs/provincial-plaque-program/provincial-plaque-background-papers/buxton-settlement" target="_blank">Link</a></li>
-            <li>Josiah Henson Museum — Ontario Heritage Trust info. <a href="https://www.heritagetrust.on.ca/properties/josiah-henson-museum" target="_blank">Link</a></li>
-            <li>Wikipedia — British Methodist Episcopal Church, Salem Chapel. <a href="https://en.wikipedia.org/wiki/British_Methodist_Episcopal_Church,_Salem_Chapel" target="_blank">Link</a></li>
-            <li>Wikipedia — Sandwich First Baptist Church (National Historic Site). <a href="https://en.wikipedia.org/wiki/Sandwich_First_Baptist_Church" target="_blank">Link</a></li>
-            <li>Encyclopædia Britannica — overview of Underground Railroad in North America. <a href="https://www.britannica.com/topic/Underground-Railroad" target="_blank">Link</a></li>
-        </ol>
-    </article>
+        <div class="question" id="q4-container">
+            <p>4. Who established the Buxton Settlement (Elgin Settlement) in 1849, which became a model of agricultural and academic success?</p>
+            <label><input type="radio" name="q4" value="a"><span>Josiah Henson</span></label>
+            <label><input type="radio" name="q4" value="b"><span>Rev. William King</span></label>
+            <label><input type="radio" name="q4" value="c"><span>Lt. Gov. Simcoe</span></label>
+            <span class="feedback" aria-live="polite"></span>
+        </div>
 
-    <footer class="container">
-        <p>&copy; The Promised Land Research<br>
-        An Amazing Heritage Research Project</p>
-    </footer>
+        <div class="question" id="q5-container">
+            <p>5. What does Benjamin Drew’s <em>A North-Side View of Slavery</em> (1856) provide, according to the text?</p>
+            <label><input type="radio" name="q5" value="a"><span>First-hand interviews with formerly enslaved people living in Canada</span></label>
+            <label><input type="radio" name="q5" value="b"><span>Maps of Underground Railroad routes</span></label>
+            <label><input type="radio" name="q5" value="c"><span>Government records of refugee numbers</span></label>
+            <span class="feedback" aria-live="polite"></span>
+        </div>
+
+        <div class="quiz-actions">
+            <button type="submit" class="btn btn-primary">Submit answers</button>
+        </div>
+    </form>
+
+    <p id="result" role="status" aria-live="polite"></p>
+</main>
+
+<script>
+document.getElementById("quizForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var answers = { q1: "b", q2: "a", q3: "b", q4: "b", q5: "a" };
+    var form = this;
+    var resultEl = document.getElementById("result");
+    var questionIds = ["q1", "q2", "q3", "q4", "q5"];
+
+    // Check if all 5 questions have a selection
+    var allAnswered = true;
+    for (var i = 0; i < questionIds.length; i++) {
+        if (!form.querySelector("input[name=\"" + questionIds[i] + "\"]:checked")) {
+            allAnswered = false;
+            break;
+        }
+    }
+
+    if (!allAnswered) {
+        // Clear any previous per-question feedback
+        for (var j = 0; j < questionIds.length; j++) {
+            var container = document.getElementById(questionIds[j] + "-container");
+            var feedback = container.querySelector(".feedback");
+            feedback.textContent = "";
+            feedback.className = "feedback";
+        }
+        window.alert("Please select an answer for all 5 questions.");
+        return;
+    }
+
+    // All answered: show correct/incorrect and score
+    resultEl.className = "";
+    var score = 0;
+
+    for (var question in answers) {
+        var selected = form.querySelector("input[name=\"" + question + "\"]:checked");
+        var container = document.getElementById(question + "-container");
+        var feedback = container.querySelector(".feedback");
+
+        if (selected.value === answers[question]) {
+            score++;
+            feedback.textContent = "Correct";
+            feedback.className = "feedback correct";
+        } else {
+            feedback.textContent = "Incorrect";
+            feedback.className = "feedback incorrect";
+        }
+    }
+
+    resultEl.textContent = "You scored " + score + " out of 5.";
+    resultEl.style.display = "block";
+
+    document.getElementById("scoreField").value = score + " / 5";
+
+    var dots = document.querySelectorAll("#quizProgress span");
+    for (var i = 0; i < dots.length; i++) dots[i].classList.add("done");
+
+    window.alert("You got " + score + " out of 5 questions correct.");
+
+    // Submit to Formspree using fetch to avoid page redirect
+    setTimeout(function() {
+        var formData = new FormData(form);
+        fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(function(response) {
+            if (response.ok) {
+                console.log("Form submitted successfully to Formspree");
+            } else {
+                console.log("Form submission had an error");
+            }
+        })
+        .catch(function(error) {
+            console.log("Error submitting form:", error);
+        });
+    }, 2000);
+});
+</script>
+
 </body>
 </html>
