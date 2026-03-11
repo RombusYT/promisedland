@@ -615,8 +615,8 @@ a:focus-visible {
 .media-card img {
     display: block;
     width: 100%;
-    max-width: 100%;
-    height: auto;
+    height: 320px;
+    object-fit: cover;
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-sm);
     margin-bottom: 0.75rem;
