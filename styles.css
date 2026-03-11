@@ -1,6 +1,23 @@
 /* ===== Promised Land — Design system ===== */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
+/* ===== Animated background ===== */
+@keyframes bg-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.03; }
+    33% { transform: translate(30px, -20px) scale(1.05); opacity: 0.05; }
+    66% { transform: translate(-20px, 20px) scale(0.95); opacity: 0.04; }
+}
+
+@keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 :root {
     --color-bg: #E8E8E8;
     --color-surface: #FFFFFF;
@@ -30,15 +47,51 @@
 }
 
 html {
-    background-color: var(--color-bg);
     scroll-behavior: smooth;
+    min-height: 100%;
 }
 
 body {
+    position: relative;
     color: var(--color-text);
     font-family: var(--font-body);
     font-size: 17px;
     line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Animated gradient background */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(
+        135deg,
+        #E8E8E8 0%,
+        #D8D8D8 25%,
+        #E5E5E5 50%,
+        #D0D0D0 75%,
+        #E8E8E8 100%
+    );
+    background-size: 400% 400%;
+    animation: bg-shift 15s ease infinite;
+}
+
+/* Floating shapes overlay */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image:
+        radial-gradient(ellipse 80px 80px at 10% 20%, rgba(0,0,0,0.04) 0%, transparent 50%),
+        radial-gradient(ellipse 120px 120px at 90% 80%, rgba(0,0,0,0.03) 0%, transparent 50%),
+        radial-gradient(ellipse 100px 100px at 50% 50%, rgba(0,0,0,0.02) 0%, transparent 60%);
+    background-size: 100% 100%;
+    animation: float 20s ease-in-out infinite;
+    pointer-events: none;
 }
 
 /* ===== Typography ===== */
@@ -80,6 +133,11 @@ a:focus-visible {
     text-align: center;
     color: #FFF;
     box-shadow: var(--shadow-md);
+    transition: box-shadow 0.4s ease, padding 0.3s ease;
+}
+
+.title-nav:hover {
+    box-shadow: var(--shadow-lg);
 }
 
 .title-nav .title {
@@ -88,6 +146,11 @@ a:focus-visible {
     color: #FFF;
     margin: 0 0 0.5rem;
     letter-spacing: 0.02em;
+    transition: letter-spacing 0.3s ease, transform 0.3s ease;
+}
+
+.title-nav:hover .title {
+    letter-spacing: 0.03em;
 }
 
 .title-nav p {
@@ -118,10 +181,14 @@ a:focus-visible {
     font-family: var(--font-body);
     font-weight: 600;
     font-size: 0.95rem;
-    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links a:hover {
+    transform: translateY(-2px);
+}
+
+.nav-links a:hover:not(.active) {
     background: #FFF;
     color: #1A1A1A;
     border-color: #FFF;
@@ -143,6 +210,24 @@ a:focus-visible {
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--color-border);
     text-align: left;
+    transition: box-shadow 0.4s ease, transform 0.4s ease, border-color 0.3s ease;
+    animation: fade-in-up 0.6s ease-out backwards;
+}
+
+.container:nth-child(2) { animation-delay: 0.1s; }
+.container:nth-child(3) { animation-delay: 0.2s; }
+.container:nth-child(4) { animation-delay: 0.3s; }
+.container:nth-child(5) { animation-delay: 0.4s; }
+.container:nth-child(6) { animation-delay: 0.5s; }
+.container:nth-child(7) { animation-delay: 0.6s; }
+.container:nth-child(8) { animation-delay: 0.7s; }
+.container:nth-child(9) { animation-delay: 0.8s; }
+.container:nth-child(10) { animation-delay: 0.9s; }
+.container:nth-child(n+11) { animation-delay: 1s; }
+
+.container:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
 }
 
 /* Extra space between navbar and first content section */
@@ -158,6 +243,7 @@ a:focus-visible {
     font-weight: 700;
     color: var(--color-text);
     border-bottom: 2px solid var(--color-border);
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .container ul {
@@ -188,6 +274,13 @@ a:focus-visible {
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--color-border);
     text-align: left;
+    transition: box-shadow 0.4s ease, transform 0.4s ease, border-color 0.3s ease;
+    animation: fade-in-up 0.6s ease-out backwards;
+}
+
+.quiz-container:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
 }
 
 /* Space between navbar and quiz content (same as home page) */
@@ -223,6 +316,7 @@ a:focus-visible {
     border-radius: 2px;
     flex: 1;
     min-width: 20px;
+    transition: background 0.5s ease;
 }
 
 .quiz-progress span.done {
@@ -235,6 +329,11 @@ a:focus-visible {
     background: var(--color-surface-soft);
     border-radius: var(--radius-sm);
     border: 1px solid var(--color-border);
+    transition: border-color 0.3s ease, background 0.3s ease, transform 0.2s ease;
+}
+
+.question:hover {
+    border-color: #B0B0B0;
 }
 
 .question p {
@@ -256,10 +355,11 @@ a:focus-visible {
     border-radius: var(--radius-sm);
     border: 2px solid transparent;
     background: var(--color-surface);
-    transition: border-color 0.2s, background 0.2s;
+    transition: border-color 0.3s ease, background 0.3s ease, transform 0.2s ease;
 }
 
 .question label:hover {
+    transform: translateX(4px);
     border-color: var(--color-border);
     background: var(--color-surface-soft);
 }
@@ -286,6 +386,7 @@ a:focus-visible {
     margin-top: 0.75rem;
     font-size: 0.95rem;
     font-weight: 600;
+    transition: opacity 0.4s ease, color 0.3s ease;
 }
 
 .question .feedback.correct {
@@ -342,6 +443,8 @@ a:focus-visible {
     background: var(--color-surface-soft);
     border-radius: var(--radius-sm);
     border: 1px solid var(--color-border);
+    transition: opacity 0.4s ease, transform 0.3s ease;
+    animation: fade-in-up 0.5s ease-out;
 }
 
 #result.quiz-incomplete-message {
@@ -372,8 +475,10 @@ a:focus-visible {
     bottom: 0;
     width: 3px;
     background: linear-gradient(to bottom, #4A4A4A, #6B6B6B, #4A4A4A);
+    background-size: 100% 200%;
     transform: translateX(-50%);
     border-radius: 2px;
+    animation: bg-shift 8s ease infinite;
 }
 
 .timeline-item {
@@ -432,6 +537,12 @@ a:focus-visible {
     border-radius: var(--radius-sm);
     border: 1px solid var(--color-border);
     box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-content:hover {
+    box-shadow: var(--shadow-md);
+    transform: scale(1.02);
 }
 
 .timeline-item-left .timeline-content {
@@ -452,6 +563,12 @@ a:focus-visible {
     flex-shrink: 0;
     z-index: 2;
     box-shadow: 0 0 0 2px #4A4A4A;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: translate(-50%, 6px) scale(1.2);
+    box-shadow: 0 0 0 4px rgba(74, 74, 74, 0.3);
 }
 
 .timeline-year {
@@ -541,4 +658,18 @@ strong {
 
 em {
     font-style: italic;
+}
+
+/* ===== Reduced motion ===== */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    body::before,
+    body::after {
+        animation: none;
+    }
 }
